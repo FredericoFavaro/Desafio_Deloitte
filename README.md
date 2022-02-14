@@ -40,4 +40,5 @@ O sistema foi desenvolvido **back-end** em **Python/Django** com o auxilio do **
 - [ ] Criar apps django separados para cada CRUD, bem como para o dashboard.
 - [ ] Melhorar a responsividade
 - [ ] Melhorar a estética e UX do sistema.
+
   ...
