@@ -41,12 +41,12 @@ def update(request, pk):
     form = EquipeForm(request.POST or None, instance=data['db'])
     if form.is_valid():
         form.save()
-        return redirect('home')
+        return redirect('equipe_home')
 
 def delete(request, pk):
     db = equipe.objects.get(pk=pk)
     db.delete()
-    return redirect('home')
+    return redirect('equipe_home')
 
 ## Serviços
 
