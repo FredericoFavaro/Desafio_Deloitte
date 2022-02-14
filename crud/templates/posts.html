@@ -10,6 +10,7 @@
         <h1>Postagens</h1>
     </div>
     <div class="col-8 m-auto pt-2 pb-2">
+        <a href="/" class="btn btn-primary">Voltar</a>
         <a href="/posts_form" class="btn btn-success">Criar nova postagem</a>
     </div>
     <div class="col-8 m-auto pt-4 pb-2">
@@ -31,7 +32,7 @@
                     <td>{{dbs.autor}}</td>
                     <td>{{dbs.data_publi}}</td>
                     <td>
-                        <a href="/posts_view/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
+                        <a href="/posts_view/{{dbs.id}}/" class="btn btn-dark">Ver texto</a>
                         <a href="/posts_edit/{{dbs.id}}/" class="btn btn-primary">Editar</a>
                         <a href="/posts_delete/{{dbs.id}}/" class="btn btn-danger">Deletar</a>
                     </td>

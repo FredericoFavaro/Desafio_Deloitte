@@ -6,9 +6,12 @@ from crud.models import equipe, servicos, posts
 
 ### Equipe views
 def home(request):
+    return render(request, 'index.html')
+
+def equipe_home(request):
     data = {}
     data['db'] = equipe.objects.all()
-    return render(request, 'index.html', data)
+    return render(request, 'equipe.html', data)
 
 def form(request):
     data = {}
@@ -19,7 +22,7 @@ def create(request):
     form = EquipeForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('home')
+        return redirect('equipe_home')
 
 def view(request, pk):
     data = {}
@@ -93,6 +96,7 @@ def posts_home(request):
     data = {}
     data['db'] = posts.objects.all()
     return render(request, 'posts.html', data)
+
 
 def posts_form(request):
     data = {}
