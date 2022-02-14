@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from crud.forms import EquipeForm, ServicosForm
-from crud.models import equipe, servicos
+from crud.forms import EquipeForm, ServicosForm, PostsForm
+from crud.models import equipe, servicos, posts
 
 # Create your views here.
 
@@ -86,3 +86,45 @@ def servicos_delete(request, pk):
     db = servicos.objects.get(pk=pk)
     db.delete()
     return redirect('servicos_home')
+
+## Postagem
+
+def posts_home(request):
+    data = {}
+    data['db'] = posts.objects.all()
+    return render(request, 'posts.html', data)
+
+def posts_form(request):
+    data = {}
+    data['form'] = PostsForm()
+    return render(request, 'posts_form.html', data)
+
+def posts_create(request):
+    form = PostsForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('posts_home')
+
+def posts_view(request, pk):
+    data = {}
+    data['db'] = posts.objects.get(pk=pk)
+    return render(request, 'posts_view.html', data)
+
+def posts_edit(request, pk):
+    data = {}
+    data['db'] = posts.objects.get(pk=pk)
+    data['form'] = PostsForm(instance=data['db'])
+    return render(request, 'posts_form.html', data)
+
+def posts_update(request, pk):
+    data = {}
+    data['db'] = posts.objects.get(pk=pk)
+    form = PostsForm(request.POST or None, instance=data['db'])
+    if form.is_valid():
+        form.save()
+        return redirect('posts_home')
+
+def posts_delete(request, pk):
+    db = posts.objects.get(pk=pk)
+    db.delete()
+    return redirect('posts_home')

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from crud.views import home, form, create, view, edit, update, delete, servicos_home, servicos_form, servicos_create, servicos_view, servicos_edit, servicos_update, servicos_delete
+from crud.views import home, form, create, view, edit, update, delete, servicos_home, servicos_form, servicos_create, servicos_view, servicos_edit, servicos_update, servicos_delete, posts_home, posts_form, posts_create, posts_view, posts_edit, posts_update, posts_delete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,4 +33,11 @@ urlpatterns = [
     path('servicos_edit/<int:pk>/', servicos_edit, name='servicos_edit'),
     path('servicos_update/<int:pk>/', servicos_update, name='servicos_update'),
     path('servicos_delete/<int:pk>/', servicos_delete, name='servicos_delete'),
+    path('posts_home/', posts_home, name='posts_home'),
+    path('posts_form/', posts_form, name='posts_form'),
+    path('posts_create/', posts_create, name='posts_create'),
+    path('posts_view/<int:pk>/', posts_view, name='posts_view'),
+    path('posts_edit/<int:pk>/', posts_edit, name='posts_edit'),
+    path('posts_update/<int:pk>/', posts_update, name='posts_update'),
+    path('posts_delete/<int:pk>/', posts_delete, name='posts_delete'),
 ]
