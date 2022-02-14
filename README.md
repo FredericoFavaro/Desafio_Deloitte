@@ -28,16 +28,16 @@ O sistema foi desenvolvido **back-end** em **Python/Django** com o auxilio do **
 
 ## Features a serem implementadas
 
-- [] Configurar a data de postagem para que seja gerada e modificada automaticamente quando for publicado ou editado respectivamente.
-- [] Incluir campo de busca em cada CRUD
-- [] Melhorar segurança do sistema incluindo credenciamento 
-- [] Criar uma landing page apresentando a empresa, serviços e funcionários interligando as informações dos bancos de dados, ou seja, as informações da langing page serão atualizadas automaticamente sempre que tiver alteração no banco.
-- [] Criar um link na landing page para as postagens no blog da empresa.
-- [] Permitir incluir imagens nas postagens e no cadastro dos funcionários.
-- [] Refatorar o código para melhorar a legibilidade e futuras manutenções.
-- [] Criar CSS para padronizar as janelas e facilitar futuras manutenções.
-- [] Adicionar confirmação para deletar os dados.
-- [] Criar apps django separados para cada CRUD, bem como para o dashboard.
-- [] Melhorar a responsividade
-- [] Melhorar a estética e UX do sistema.
+- [ ] Configurar a data de postagem para que seja gerada e modificada automaticamente quando for publicado ou editado respectivamente.
+- [ ] Incluir campo de busca em cada CRUD
+- [ ] Melhorar segurança do sistema incluindo credenciamento 
+- [ ] Criar uma landing page apresentando a empresa, serviços e funcionários interligando as informações dos bancos de dados, ou seja, as informações da langing page serão atualizadas automaticamente sempre que tiver alteração no banco.
+- [ ] Criar um link na landing page para as postagens no blog da empresa.
+- [ ] Permitir incluir imagens nas postagens e no cadastro dos funcionários.
+- [ ] Refatorar o código para melhorar a legibilidade e futuras manutenções.
+- [ ] Criar CSS para padronizar as janelas e facilitar futuras manutenções.
+- [ ] Adicionar confirmação para deletar os dados.
+- [ ] Criar apps django separados para cada CRUD, bem como para o dashboard.
+- [ ] Melhorar a responsividade
+- [ ] Melhorar a estética e UX do sistema.
   ...
